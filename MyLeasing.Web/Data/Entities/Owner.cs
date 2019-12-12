@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyLeasing.Web.Data.Entities
 {
@@ -35,9 +36,11 @@ namespace MyLeasing.Web.Data.Entities
 
         public string FullnameWithDocument => $"{FirstName} {LastName} - {Document}";
 
-        public Contract contract { get; set; }
 
-        public Property property { get; set; }
+        public ICollection<Property> properties { get; set; }
+
+
+        public ICollection<Contract> contracts { get; set; }
 
     }
 }

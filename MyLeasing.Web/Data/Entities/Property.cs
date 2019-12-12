@@ -42,12 +42,14 @@ namespace MyLeasing.Web.Data.Entities
 
         public string Remarks { get; set; }
 
-        public ICollection<PropertyType> propertyTypes { get; set; }
+        public PropertyType propertyType { get; set; }
 
-        public PropertyImage PropertyImage { get; set; }
+        public Owner owner { get; set; }
 
-        public Contract contract { get; set; }
+        public ICollection<Contract> contracts { get; set; }
 
-        public ICollection<Owner> owners { get; set; }
+        public ICollection<PropertyImage> propertyImages { get; set; }
+
+
     }
     }

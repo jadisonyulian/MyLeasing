@@ -40,12 +40,12 @@ namespace MyLeasing.Web.Data.Entities
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime EndDateLocal => EndDate.ToLocalTime();
 
+        public Property property { get; set; }
 
-        public ICollection<Lessee> lessees { get; set; }
+        public Lessee lessee { get; set; }
 
-        public ICollection<Property> properties { get; set; }
+        public Owner owner { get; set; }
 
-        public ICollection<Owner> owners { get; set; }
 
     }
 }

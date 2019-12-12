@@ -11,13 +11,12 @@ namespace MyLeasing.Web.Data.Entities
         [Required(ErrorMessage = "The field {0} is mandatory.")]
         public string ImageUrl { get; set; }
 
-        public Property Property { get; set; }
 
         // TODO: Change the path when publish
         public string ImageFullPath => $"https://TBD.azurewebsites.net{ImageUrl.Substring(1)}";
 
 
-        public ICollection<Property> properties { get; set; }
+        public Property property { get; set; }
 
 
     }
